@@ -1,0 +1,876 @@
+@charset "UTF-8";
+
+body{
+    margin: 0;
+   font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
+
+.header{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  background: #A89331;
+  font-size: 1.5rem;
+}
+.header-logo img{
+  display:block;
+  width: width:80%;
+  padding-left: 30px;
+  padding-top: ;
+}
+
+
+
+.main-nav{
+  display: flex;
+}
+.main-nav-list{
+  list-style: none;
+}
+.main-nav-list a{
+ text-align: center;
+  margin-right: 50px;    
+  display:block;
+  width: 100px;
+  text-decoration: none;
+  color: #FFFFFB;
+}
+.main-nav-list a::after{
+  content: '';
+  display: block;
+  width: 0;
+  margin: 6px auto 0;
+  border-bottom: 3px solid #A51DA8;
+  transition: width 0.3s;
+}
+.main-nav-list a:hover::after{
+  width: 100%;
+}
+.hb{
+  display: none;
+}
+.menu-btn{
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 11;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:  #A89331;
+  color: #FFFFFB;
+}
+.menu-btn span{
+  width: 30px;
+  height: 1px;
+  top: 15px;
+  right: 20px;
+  display: block;
+  background: #FFFFFB;
+  position: absolute;
+}
+.menu-btn span:nth-child(1){
+  top: 15px;
+}
+.menu-btn span:nth-child(2){
+  top: 25px;
+}
+.menu-btn span:nth-child(3){
+  top: 35px;
+}
+.menu-btn.is-active span:nth-child(1){
+  top: 25px;
+  transform: rotate(-45deg);
+  transition: .4s;
+}
+.menu-btn.is-active span:nth-child(2){
+  top: 25px;
+  transform: rotate(45deg);
+  transition: .4s;
+}
+.menu-btn.is-active span:nth-child(3){
+  display: none;
+}
+.menu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #A89331;
+  opacity: 0;
+  transition: opacity .4s linear;
+  pointer-events: none;
+}
+.is-active{
+  opacity: 1;
+  pointer-events: auto;
+}
+.menu__item{
+  width: 100%;
+  padding: .5em 1em;
+  color: #FFFFFB;
+}
+.menu__item a{
+  display:block;
+  width: 200px;
+  text-decoration: none;
+  color: #FFFFFB;
+  margin: 0 auto;
+}
+.menu__item a::after{
+  content: '';
+  display: block;
+  width: 0;
+  margin: 6px auto 0;
+  border-bottom: 1px solid #A89331;
+  transition: width 0.3s;
+}
+.menu__item a:hover::after{
+  width: 100%;
+}
+
+
+.wrappper{
+    width:100%;
+}
+.sample img{
+    width: 300px;    
+    height: auto;
+}
+
+
+.navbar{
+    margin:0 auto;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+.sample{
+    padding-left: 80px;
+}
+.navbar h1{
+    color:white;
+    font-size: 28px;
+    font-family: "Sawarabi Mincho"; 
+    padding-left: 60px;
+}
+
+.navbar h1 span{
+    color:white;
+    font-size: 23px;
+    font-family: "Sawarabi Mincho"; 
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    color:white;
+    padding-right: 20px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+}
+
+.hover9 {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+.hover9::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #A51DA8;
+  transition: all 0.3s ease 0s;
+}
+.hover9:hover {
+  cursor: pointer;
+}
+.hover9:hover::after {
+  width: 100%;
+}
+
+.navbar li{
+    margin-top:10px;
+    margin-left:50px;
+    margin-right:10px;
+}
+
+.navbar li a{
+    color:white;
+    font-size: 30px;
+    font-family: "Sawarabi Mincho"; 
+}
+
+
+.top img{
+    width: 100%;    
+    height: auto;
+}
+
+.image1 img{
+    width:100%;
+    height:760px;
+   
+}
+
+/* 全体の枠 */
+.intro {
+    position: relative;
+    height: 760px;
+    width:100%;
+}
+ 
+/* 重ねる文字 */
+.text1 {
+　　font-family: "Sawarabi Mincho"; 
+    position:absolute;
+    display: block;
+    background-color:rgba(255,255,255,0.68);
+    color: #000;
+    padding:  20px;   
+    left:  280px;                /* 左からの位置指定 */
+    top: 195px;                  /* 上からの位置指定 */
+    width:50%;
+    margin:0 auto;
+    font-weight: 200;
+}
+
+
+
+.text1 h3{
+    font-family: "Sawarabi Mincho";
+}
+
+.text1 h2{
+   font-family: "Sawarabi Mincho";
+}
+
+.menu2{
+    padding-top: 80px;
+}
+
+.info{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Athelas','American Typewriter','Courier',sans-serif;
+}
+
+.plane img{
+    width: 500px;
+    height: 100%;
+    
+}
+
+.raisins img{
+    width:500px;
+    height:100%;
+}
+
+.plane{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+#heading a{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding: 30px;
+    font-family: 'Athelas','American Typewriter','Courier',sans-serif;
+    font-size: 40px;
+    color: #E879D7;
+    text-decoration: none;
+}
+
+    
+
+.raisins{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+
+.intro2{
+    display: flex;
+    text-align: center;
+    justify-content:center;
+    padding: 10px
+}
+
+.commitment{
+    padding: 10px;
+}
+
+.howto{
+   padding: 10px;
+}
+
+.btn-flat-border {
+  font-size: 25px;
+  display: inline-block;
+  padding: 1em 2em;
+  text-decoration: none;
+  color:  #E879D7;
+  border: solid 2px #E879D7;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.btn-flat-border:hover {
+  background: #E879D7;
+  color: white;
+}
+
+.plane_script{
+    padding-left: 50px;
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','klee','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
+
+.plane_script h1{
+    color: #E802AC;
+    font-size: 2.6em;
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','klee','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif ;
+}
+
+.plane_script h2 {
+    font-size: 18px;
+    padding-left: 30px;
+}
+
+.plane_script h3{
+    font-size: 18px;
+    padding-left: 30px;
+}
+
+.raisins_script{
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','klee','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
+
+.raisins_script h1{
+    color: #E802AC;
+    font-size: 2.6em;
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','klee','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
+
+.raisins_script h2 {
+    font-size: 18px;
+    padding-left: 30px;
+}
+
+.raisins_script h3 {
+    font-size: 18px;
+    padding-left: 30px;
+}
+
+
+.info {
+    margin: 0 ;
+    display: block;
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Athelas','American Typewriter','Courier',sans-serif;
+    font-size: 40px;
+    text-decoration: none;
+    color: #000;
+}
+
+
+.news{
+    padding-bottom: 100px;
+    height: 350px;
+    margin: 0 auto;
+    background: -moz-linear-gradient(top left, #FFF, #FFC778); 
+    background: -webkit-linear-gradient(top left, #FFF, #FFC778); 
+    background: linear-gradient(to bottom right, #FFF, #FFC778); 
+}
+
+.news h1{
+    padding-top: 150px;
+    padding-bottom: 10px;
+    text-align-last: center;
+    font-size: 50px;
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','klee','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+  　position: relative;
+  color: #000;
+  line-height: 1.4;
+  -webkit-box-reflect: below -10px -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0) 10%,rgba(0, 0, 0, 0.6));
+}
+
+.instagram a{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding: 30px;
+    font-family: 'Athelas','American Typewriter','Courier',sans-serif;
+    font-size: 40px;
+    text-decoration: none;
+    color: #000;
+}
+
+.insta h1{
+    text-align: center;
+    font-size: 25px;
+    font-family: "Sawarabi Mincho"; 
+}
+
+.ggmap {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  float:left;
+  
+}
+ 
+
+
+
+.acce a{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding: 30px;
+    font-family: 'Athelas','American Typewriter','Courier',sans-serif;
+    font-size: 40px;
+    text-decoration: none;
+    color: #000;
+}
+
+.storeinfo{
+     font-family: 'Athelas','American Typewriter','Courier',sans-serif;
+     display: flex;
+     justify-content: center;
+     padding:20px;
+}
+
+.acce h1{
+    margin: 0 auto;
+    font-size: 30px;
+    font-family: "Sawarabi Mincho"; 
+    font-weight: 200;
+}
+
+.acce h2{
+    font-weight: 100;
+    margin: 0 auto;
+    font-size: 15px;
+    font-family: 'Athelas','American Typewriter','Courier',sans-serif;
+}
+
+　.acce h1 h2{
+　   margin: 0 auto;
+　}
+　
+.intro4 {
+    padding: 0px;
+    font-size: 5px;
+    color: red;
+}
+
+.store_footer{
+    display: flex;
+    justify-content:center;
+    background-color: #A89331;
+    color: white;
+    margin-bottom: 0px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.store_footer1 h1{
+    font-family: "Sawarabi Mincho"; 
+}
+
+.store_footer1 h2{
+    font-family: "Sawarabi Mincho"; 
+}
+
+.store_footer2{
+    padding-left: 20px;
+}
+.copy{
+   text-align: center;
+}
+
+
+.menu1 img{
+    width:600px;
+    height:auto;
+}
+.menu2 img{
+   
+    height:auto;
+}
+
+.menu3 img{
+    width:100%;
+    height: auto;
+}
+
+.script h1{
+    text-align: center;
+}
+
+
+
+.resp{
+    display: none;
+    width:100%;
+}
+
+@media screen and (max-width:500px){
+    
+    body{
+        margin: 0;
+    }
+    .pc{
+        display: none;
+    }
+    .resp{
+        display: block;
+    }
+    .header{
+    height: 50px;
+  }
+  .header-logo img{
+    width: 180px;
+  }
+  .hb{
+    display: block;
+  }
+  .header-menu{
+    display: none;
+  }
+
+
+    /* 重ねる文字 */
+    .text1 {
+　　font-family: "Sawarabi Mincho"; 
+    position:absolute;
+    display: block;
+    background-color:rgba(255,255,255,0.68);
+    color: #000;
+    padding:10px;
+    left: 30px;                /* 左からの位置指定 */
+    top: 45px;                  /* 上からの位置指定 */
+    width:80%;
+    margin:0 auto;
+    font-weight: 200;
+}
+
+
+    .text1 h3{
+    font-family: "Sawarabi Mincho";
+    font-size: 10px;
+    }
+
+   .text1 h2{
+   font-family: "Sawarabi Mincho";
+   font-size: 15px;
+   }
+    
+    
+    .plane{
+         display: block;
+    }
+    .plane_script{
+        padding:0;
+    }
+    
+    .raisins{
+        display: block;
+    }
+    
+    .plane_script h1{
+    color: #E802AC;
+    font-size: 1.4em;
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','klee','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif ;
+     }
+
+    .plane_script h2 {
+    font-size: 10px;
+    
+    }
+
+    .plane_script h3{
+    font-size: 10px;
+   
+    }
+
+    .raisins_script{
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','klee','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+    }
+
+    .raisins_script h1{
+    color: #E802AC;
+    font-size: 1.4em;
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','klee','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+    }
+
+    .raisins_script h2 {
+    font-size: 10px;
+    
+    }
+
+    .raisins_script h3 {
+    font-size: 10px;
+    
+    }
+    
+    .info {
+    margin: 0 ;
+    display: block;
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Athelas','American Typewriter','Courier',sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    }
+
+
+    .news{
+    padding-bottom: 100px;
+    height: 350px;
+    margin: 0 auto;
+    background: -moz-linear-gradient(top left, #FFF, #FFC778); 
+    background: -webkit-linear-gradient(top left, #FFF, #FFC778); 
+    background: linear-gradient(to bottom right, #FFF, #FFC778); 
+    }
+
+    .news h1{
+    padding-top: 150px;
+    padding-bottom: 10px;
+    text-align-last: center;
+    font-size: 20px;
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','klee','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+  　position: relative;
+    color: #000;
+    line-height: 1.4;
+    -webkit-box-reflect: below -10px -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0) 10%,rgba(0, 0, 0, 0.6));
+   }
+   .acce a{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding: 30px;
+    font-family: 'Athelas','American Typewriter','Courier',sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    }
+    
+    .ggmap {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  width:100%;
+  }
+ 
+
+    .storeinfo{
+     font-family: 'Athelas','American Typewriter','Courier',sans-serif;
+     padding:20px;
+     display: block;
+    }
+
+    .acce h1{
+    margin: 0 auto;
+    font-size: 15px;
+    font-family: "Sawarabi Mincho"; 
+    font-weight: 200;
+    }
+   .acce p{
+       font-size: 8px;
+   }
+   .acce h2{
+    font-weight: 100;
+    margin: 0 auto;
+    font-size: 8px;
+    font-family: 'Athelas','American Typewriter','Courier',sans-serif;
+    }
+
+ 　 .acce h1 h2{
+　   margin: 0 auto;
+  　}
+    
+    .intro{
+        height:100%;
+    }
+    
+    
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .image1 img{
+        height: 400px;
+        width:100vh;
+        object-fit: cover;
+    }
+    
+    .main{
+    width:100%;
+    }
+    
+   .store_footer{
+    display: block;
+    justify-content:center;
+    background-color: #A89331;
+    color: white;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    }
+
+   .store_footer1 {
+    padding-left: 20px;
+    font-size: 8px;
+    font-family: "Sawarabi Mincho"; 
+   }
+
+   .store_footer2{
+    padding-left: 20px;
+    font-size: 6px;
+   }
+  .copy{
+   text-align: center;
+   font-size: 4px;
+ }
+}
+
+@media screen and (min-width:700px) and ( max-width:1100px) {
+     body{
+        margin: 0;
+    }
+    .pc{
+        display: block;
+    }
+    .resp{
+        display: none;
+    }
+    .header{
+    height: 50px;
+  }
+  .header-logo img{
+    width: 200px;
+  }
+  .hb{
+    display: block;
+  }
+  .header-menu{
+    display: none;
+  }
+.text1 {
+　　font-family: "Sawarabi Mincho"; 
+    position:absolute;
+    display: block;
+    background-color:rgba(255,255,255,0.68);
+    color: #000;
+    padding:20px;   
+    left: 70px;                /* 左からの位置指定 */
+    top: 120px;                  /* 上からの位置指定 */
+    width:70%;
+    margin:0 auto;
+    font-weight: 200;
+}
+
+    .plane{
+         display: block;
+    }
+    .plane_script{
+        padding:0;
+    }
+    
+    .raisins{
+        display: block;
+    }
+    
+    .plane_script h1{
+    color: #E802AC;
+    font-size: 4.0em;
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','klee','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif ;
+     }
+
+    .plane_script h2 {
+    font-size: 20px;
+    
+    }
+
+    .plane_script h3{
+    font-size: 25px;
+   
+    }
+
+    .raisins_script{
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','klee','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+    }
+
+    .raisins_script h1{
+    color: #E802AC;
+    font-size: 4.0em;
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','klee','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+    }
+
+    .raisins_script h2 {
+    font-size: 20px;
+    
+    }
+
+    .raisins_script h3 {
+    font-size: 25px;
+    
+    }
+
+.plane img{
+    width: 750px;
+    height: 100%;
+    
+}
+
+.raisins img{
+    width:750px;
+    height:100%;
+}
+
+.store_footer{
+    display: flex;
+    justify-content:center;
+    background-color: #A89331;
+    color: white;
+    margin-bottom: 0px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 20px; 
+    padding-right:20px;
+}
+  .store_footer1 {
+    padding-left: 20px;
+    font-size: 10px;
+    font-family: "Sawarabi Mincho"; 
+   }
+
+   .store_footer2{
+    padding-left: 20px;
+    font-size: 10px;
+   }
+}
+
